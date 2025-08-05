@@ -2,8 +2,8 @@
   <h2>My To-Do List</h2>
 
   <div>
-    <input type="text" placeholder="Add a new to-do...">
-    <button>Add</button>
+    <input type="text" placeholder="Add a new to-do..." [(ngModel)]="newTodo">
+    <button (click)="addTodo()">Add</button>
   </div>
 
   <ul>

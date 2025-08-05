@@ -17,4 +17,13 @@ export class TodoComponent {
     'Build a To-Do App',
     'Push to GitHub'
   ];
+
+  addTodo() {
+    // Only add the item if the input isn't empty
+    if (this.newTodo.trim().length) {
+      this.todos.push(this.newTodo);
+      // Clear the input box after adding
+      this.newTodo = '';
+    }
+  }
 }
