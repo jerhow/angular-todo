@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.css'
 })
+
 export class TodoComponent {
   newTodo: string = '';
 
@@ -25,5 +26,9 @@ export class TodoComponent {
       // Clear the input box after adding
       this.newTodo = '';
     }
+  }
+
+  deleteTodo(index: number) {
+    this.todos.splice(index, 1);
   }
 }
